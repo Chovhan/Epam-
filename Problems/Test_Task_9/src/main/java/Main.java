@@ -1,6 +1,6 @@
 // 21: Написать программу карточной игры в 21.
 
-package com.company;
+//package com.company;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,17 +15,17 @@ public class Main {
 
     public static void game() {
         Random rnd = new Random();
-        ArrayList<String> deck = new ArrayList<>();
+        ArrayList<String> deck = new ArrayList<String>();
         deck.addAll(Arrays.asList("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "K", "D", "V"));
         ArrayList<String> sessionDeck = createDeck(deck);
         int bankFond = 1000;
         int userCash = 1000;
         deckScribble(sessionDeck);
 
-        ArrayList<String> userCardDeck = new ArrayList<>();
+        ArrayList<String> userCardDeck = new ArrayList<String>();
         userCardDeck.add(sessionDeck.get(0));
         deleteCard(sessionDeck, 0);
-        ArrayList<String> computerCardDeck = new ArrayList<>();
+        ArrayList<String> computerCardDeck = new ArrayList<String>();
         computerCardDeck.add(sessionDeck.get(0));
         deleteCard(sessionDeck, 0);
 
@@ -89,9 +89,9 @@ public class Main {
         }
     }
 
-    private static ArrayList createDeck(ArrayList deck){
+    public static ArrayList createDeck(ArrayList deck){
         Random rnd = new Random();
-        ArrayList<String> cardDeck = new ArrayList<>();
+        ArrayList<String> cardDeck = new ArrayList<String>();
         for (int i = 0; i < 36; i++) {
             String num = deck.get(rnd.nextInt(deck.size())).toString();
             cardDeck.add(num);
@@ -99,8 +99,8 @@ public class Main {
         return cardDeck;
     }
 
-    private static void deckScribble(ArrayList sDeck){
-        ArrayList<String> timeArray = new ArrayList<>();
+    public static void deckScribble(ArrayList sDeck){
+        ArrayList<String> timeArray = new ArrayList<String>();
         for (int i = 0; i < sDeck.size(); i++){
             String cardOut = sDeck.get(i).toString();
             cardOut = "*";
@@ -111,17 +111,17 @@ public class Main {
     }
 
 
-    private static String giveCard(ArrayList sDeck){ ;
+    public static String giveCard(ArrayList sDeck){ ;
         String card = sDeck.get(sDeck.size()-1).toString();
         return card;
     }
 
-    private static ArrayList deleteCard(ArrayList sDeck, int cardIndex){
+    public static ArrayList deleteCard(ArrayList sDeck, int cardIndex){
         sDeck.remove(cardIndex);
         return sDeck;
     }
 
-    private static int counting(ArrayList uDeck,  ArrayList deck){
+    public static int counting(ArrayList uDeck,  ArrayList deck){
         int count = 0;
         int weight;
         for (int i = 0; i < uDeck.size(); i++){
@@ -136,7 +136,7 @@ public class Main {
         return count;
     }
 
-    private static int giveRate(){
+    public static int giveRate(){
         Scanner user = new Scanner(System.in);
         int rate;
         while (true){
@@ -155,7 +155,7 @@ public class Main {
         return rate;
     }
 
-    private static String newGame(){
+    public static String newGame(){
         Scanner user = new Scanner(System.in);
         String choose;
         while (true){
