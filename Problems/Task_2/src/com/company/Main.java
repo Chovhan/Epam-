@@ -17,7 +17,7 @@ public class Main {
             Matcher matcher = patern.matcher(binaryNumber);
             if (matcher.find()){
                 count++;
-                System.out.println(palindromeCheck(matcher.group(0)));
+                System.out.println(binaryNumber + ": " + palindromeCheck(matcher.group(0)));
             }
         }
         System.out.println(count);
