@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d27e422e-ba9f-46a2-97e7-366138832a39" name="Default Changelist" comment="" />
+    <list default="true" id="d27e422e-ba9f-46a2-97e7-366138832a39" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Task_1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task_2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task_7/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Task_9/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_1/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_1/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_2/out/production/Task_2/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_2/out/production/Task_2/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_2/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_2/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_3/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_3/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_4/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_4/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_5/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_5/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_6/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_6/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_6/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_7/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_7/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Task_9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Task_9/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,12 +34,16 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1TClTgXbxTc5A8bmh300k1XERt1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Task_9" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -59,5 +86,16 @@
       <updated>1572971967161</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,3 +1,6 @@
+//Identical number: В двух одномерных массивах чисел найти такие числа, которые есть в обоих
+//исходных массивах.
+
 package com.company;
 
 import java.util.HashSet;

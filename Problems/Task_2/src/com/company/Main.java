@@ -1,18 +1,26 @@
+//Palindrome : Среди всех чисел типа int найти такие, двоичное представление которых
+//является палиндромом (без учета ведущих нулей).
+
 package com.company;
 
-import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
     public static void main(String[] args) {
-        long start = Runtime.getRuntime().freeMemory();
-        int myInt = (int) (Math.random() * (250-50) + 50);
-        System.out.println("Integer is: " + myInt);
-        String binaryNumber = Integer.toString(myInt, 2);
-        System.out.println("Binary number " + binaryNumber);
-        System.out.println(palindromeCheck(binaryNumber));
-        long end = Runtime.getRuntime().freeMemory();
-        System.out.println("Memory: " + (start - end));
+        long startTime = System.nanoTime();
+        System.out.println(Integer.toString(238, 2));
+
+        for (int i = -32768; i < 32768; i++){
+            String binaryNumber = Integer.toString(i, 2);
+            Pattern patern = Pattern.compile("[1]+[0-1]+[1]+(?=[0]+$)");
+            Matcher matcher = patern.matcher(binaryNumber);
+            if (matcher.find()){
+                System.out.println(palindromeCheck(matcher.group(0)));
+            }
+        }
+        System.out.println(System.nanoTime() - startTime);
     }
     private static boolean palindromeCheck(String binaryNumber){
         int binaryLength = binaryNumber.length();
