@@ -9,18 +9,19 @@ import java.util.regex.Pattern;
 public class Main {
 
     public static void main(String[] args) {
-        long startTime = System.nanoTime();
-        System.out.println(Integer.toString(238, 2));
-
+        double startTime = System.nanoTime();
+        int count = 0;
         for (int i = -32768; i < 32768; i++){
             String binaryNumber = Integer.toString(i, 2);
-            Pattern patern = Pattern.compile("[1]+[0-1]+[1]+(?=[0]+$)");
+            Pattern patern = Pattern.compile("[1]+[0-1]+[1]+(?=[0]*$)");
             Matcher matcher = patern.matcher(binaryNumber);
             if (matcher.find()){
+                count++;
                 System.out.println(palindromeCheck(matcher.group(0)));
             }
         }
-        System.out.println(System.nanoTime() - startTime);
+        System.out.println(count);
+        System.out.println("Time: " + ((System.nanoTime() - startTime) / 1000000000) + " seconds");
     }
     private static boolean palindromeCheck(String binaryNumber){
         int binaryLength = binaryNumber.length();
