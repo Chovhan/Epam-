@@ -56,25 +56,21 @@ public class Main {
                     userCardWeight = counting(userCardDeck, deck);
                     computerCardWeight = counting(computerCardDeck, deck);
                     if (userCardWeight > 21){
-                        userCash -= (50+rate);
-                        bankFond += (50+rate);
-                        System.out.println("You loose! Weight of your cards is bigger then 21! Now your cash " +
-                                "is: " + userCash + "\n" + "Computer cards is: " + computerCardDeck);
+                        userCash = pickUpCash(userCash, rate);
+                        bankFond = addCash(bankFond, rate);
+                        printWeightRoundResult("loose", "your", userCash, computerCardDeck);
                     }else if (computerCardWeight > 21){
-                        userCash += (50+rate);
-                        bankFond -= (50+rate);
-                        System.out.println("You win! Weight of computer`s cards is bigger then 21! Now your " +
-                                "cash is: " + userCash + "\n" + "Computer cards is: " + computerCardDeck);
+                        userCash = addCash(userCash, rate);
+                        bankFond = pickUpCash(bankFond, rate);
+                        printWeightRoundResult("win", "computer", userCash, computerCardDeck);
                     }else if (userCardWeight > computerCardWeight){
-                        userCash += (50+rate);
-                        bankFond -= (50+rate);
-                        System.out.println("You win! Weight of your`s cards is bigger then computer`s! Now your " +
-                                "cash is: " + userCash + "\n" + "Computer cards is: " + computerCardDeck);
+                        userCash = addCash(userCash, rate);
+                        bankFond = pickUpCash(bankFond, rate);
+                        printCountingRoundResult("win", "your", "computer", userCash, computerCardDeck);
                     }else if (userCardWeight < computerCardWeight){
-                        userCash -= (50+rate);
-                        bankFond += (50+rate);
-                        System.out.println("You loose! Weight of computer`s cards is bigger then yours! Now your " +
-                                "cash is: " + userCash + "\n" + "Computer cards is: " + computerCardDeck);
+                        userCash = pickUpCash(userCash, rate);
+                        bankFond = addCash(bankFond, rate);
+                        printCountingRoundResult("loose", "computer", "user", userCash, computerCardDeck);
                     }
                     String nGame = newGame().toUpperCase();
                     if (nGame.equals("Y\n")){
@@ -93,6 +89,9 @@ public class Main {
         Random rnd = new Random();
         ArrayList<String> cardDeck = new ArrayList<>();
         for (int i = 0; i < 36; i++) {
+            for (int j = 0; j <= 4; j++){
+                String num = deck.get
+            }
             String num = deck.get(rnd.nextInt(deck.size())).toString();
             cardDeck.add(num);
         }
@@ -168,5 +167,26 @@ public class Main {
             }
         }
         return choose;
+    }
+
+    private static int addCash(int cash, int rate){
+        cash += (50+rate);
+        return cash;
+    }
+
+    private static int pickUpCash(int cash, int rate){
+        cash -= (50+rate);
+        return cash;
+    }
+
+    private static void printWeightRoundResult(String userStatus, String userType,  int userCash, ArrayList computerCardDeck){
+        System.out.println("You " + userStatus + "! Weight of" + userType + " cards is bigger then 21! Now your cash " +
+                "is: " + userCash + "\n" + "Computer cards is: " + computerCardDeck);
+
+    }
+
+    private static void  printCountingRoundResult(String userStatus, String winnerType, String looserType, int userCash, ArrayList computerCardDeck){
+        System.out.println("You " + userStatus + "! Weight of " + winnerType + "`s cards is bigger then " + looserType + "`s! Now your " +
+                "cash is: " + userCash + "\n" + "Computer cards is: " + computerCardDeck);
     }
 }

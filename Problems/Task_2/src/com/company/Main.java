@@ -11,13 +11,16 @@ public class Main {
     public static void main(String[] args) {
         double startTime = System.nanoTime();
         int count = 0;
-        for (int i = -32768; i < 32768; i++){
+        for (int i = -1000000; i < 1000000; i++){
             String binaryNumber = Integer.toString(i, 2);
             Pattern patern = Pattern.compile("[1]+[0-1]+[1]+(?=[0]*$)");
             Matcher matcher = patern.matcher(binaryNumber);
             if (matcher.find()){
                 count++;
-                System.out.println(binaryNumber + ": " + palindromeCheck(matcher.group(0)));
+                boolean w = palindromeCheck(matcher.group(0));
+                if (w==true) {
+                    System.out.println(binaryNumber);
+                }
             }
         }
         System.out.println(count);

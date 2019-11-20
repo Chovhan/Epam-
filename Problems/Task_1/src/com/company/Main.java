@@ -24,26 +24,46 @@ public class Main {
 
     public static void main(String[] args) {
         Random rnd = new Random();
-        Scanner user = new Scanner(System.in);
-
+        int count = 0;
         String dictionary = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         char hiddenLetter = dictionary.charAt(rnd.nextInt(dictionary.length()));
 
         while (true) {
             try {
-                System.out.println("Enter a letter: ");
-                String userStr = user.nextLine().toUpperCase();
-                if (userStr.charAt(0) == hiddenLetter){
-                    System.out.println("Congratulations!");
-                    break;
-                } else if (dictionary.indexOf(userStr) < dictionary.indexOf(hiddenLetter)){
-                    System.out.println("To low!");
-                } else if (dictionary.indexOf(userStr) > dictionary.indexOf(hiddenLetter)){
-                    System.out.println("To hight!");
-                }
+                count += 1;
+                String userStr = takeLetter();
+                winner(userStr, hiddenLetter, count);
+                toHight(dictionary, userStr, hiddenLetter);
+                tolow(dictionary, userStr, hiddenLetter);
             } catch (TypeNotPresentException e) {
                 System.out.println("Wrong type! Try one more time");
             }
+        }
+    }
+
+    public static String takeLetter(){
+        Scanner user = new Scanner(System.in);
+        System.out.println("Enter a letter: ");
+        String userStr = user.nextLine().toUpperCase();
+        return userStr;
+    }
+
+    public static void winner(String userStr, char hiddenLetter, int count){
+        if (userStr.charAt(0) == hiddenLetter){
+            System.out.println("Congratulations! You have: " + count + " attempts!");
+            System.exit(0);
+        }
+    }
+
+    public static void toHight(String dictionary, String userStr, char hiddenLetter){
+        if (dictionary.indexOf(userStr) > dictionary.indexOf(hiddenLetter)) {
+            System.out.println("To hight!");
+        }
+    }
+
+    public static void tolow(String dictionary, String userStr, char hiddenLetter){
+        if (dictionary.indexOf(userStr) < dictionary.indexOf(hiddenLetter)) {
+            System.out.println("To low!");
         }
     }
 }
