@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Wife{
+public class Wife {
 
     public static ArrayList wifeMain(){
         int listSize = inputListSize();
