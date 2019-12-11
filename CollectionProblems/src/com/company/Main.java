@@ -32,7 +32,7 @@ public class Main {
 
     public static ArrayList<String> findThreeGraph(ArrayList<String> allThreeGraphArray){
         ArrayList<String> array = new ArrayList<>();
-//        allThreeGraphArray.stream().filter(q -> q.length() - 3 ).collect(Collectors.toList()).forEach(System.out::println);
+//        allThreeGraphArray.stream().filter(q -> q.length()-3 ).collect(Collectors.toList()).forEach(System.out::println);
         for (int j=0; j<allThreeGraphArray.size();j++){
             for (int i = 0; i <= allThreeGraphArray.get(j).length() - 3; i++) {
                 array.add(allThreeGraphArray.get(j).substring(i, i + 3));
@@ -42,18 +42,19 @@ public class Main {
     }
 
     public static void calculateThreeGraph(ArrayList<String> array){
-//        array.stream().filter((arr) -> treeMap.containsKey(arr)).forEach(System.out::println);
-        for (String str : array) {
-            if (treeMap.containsKey(str)) {
-                treeMap.put(str, Collections.frequency(array, str));
-            }else {
-                treeMap.put(str, Collections.frequency(array, str));
-            }
-        }
+        array.stream().map(arr -> treeMap.put(arr, Collections.frequency(array, arr))).forEach(System.out::print);
+//        System.out.println(treeMap);
+//        for (String str : array) {
+//            if (treeMap.containsKey(str)) {
+//                treeMap.put(str, Collections.frequency(array, str));
+//            }else {
+//                treeMap.put(str, Collections.frequency(array, str));
+//            }
+//        }
     }
 
     public static void printThreeGraphCol() {
-        treeMap.forEach((a,b) -> System.out.println(a + "=" + b));
+        treeMap.forEach((a,b) -> System.out.print("\n" + a + "=" + b));
     }
 
 }
