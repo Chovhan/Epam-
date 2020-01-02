@@ -1,23 +1,26 @@
 import org.apache.log4j.Logger;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-public class ChocolateCandy {
+public class FilePath {
     private static final Logger log = Logger.getLogger(FilePath.class);
 
-    public ArrayList<String> getChocolateCandy(String filePath){
+    public String filePath = "./src/main/resources/Path";
+
+    public ArrayList<String> getPath() {
         ArrayList<String> lines = new ArrayList<>();
         Path file = Paths.get(filePath);
         try {
             lines = (ArrayList<String>) Files.readAllLines(file);
         } catch (IOException e) {
             e.printStackTrace();
-            log.error("Info wasn`t collected to array " + e);
+            log.error("Files pathes is not collected " + e);
         }
-        log.info("Info was collected to array from " + filePath);
+        log.info("Collect file pathes to array");
         return lines;
     }
 }
